@@ -1,0 +1,19 @@
+{
+  "name": "Mythical Wings",
+  "description" : "An vertical STG engine and game",
+  "version": "1.0.0",
+  "developer": {
+    "name": "Christophe Roussy",
+    "url": ""
+  },
+  "description": "An STG game engine",
+  "launch_path": "/index.html",
+  "permissions": {	
+    "http://localhost/*"
+  },
+  "icons": {
+    "128": "/images/player/ship.png"
+  },
+  "type": "privileged",
+  "default_locale": "en"
+}

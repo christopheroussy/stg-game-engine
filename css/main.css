@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #ee9;
+	background-color: #000;
+	/* 	background-image: url("../images/background/cabinet.png"); */
+	background-image: url("../images/background/cabinet-grey.png");
+	background-repeat: repeat;
+	/*background: rgb(122,188,255); */
+	font-weight: bold;
+	font-size: 1.2em;
+	font-family: Impact, sans-serif, monospace, arial;
+	font-family: "Times New Roman", Times, serif;
+	/* 	text-shadow: 1px 1px #00b; */
+	overflow: hidden;
+	height: 640px;
+	overflow: hidden
+}
+
+a {
+	color: #eef;
+}
+
+a:visited {
+	color: #bbe;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+/* #scanlines { */
+/* 	background: url("../images/misc/scanlines-special.png") repeat; */
+/* 	z-index: 10000; */
+/* 	position: fixed; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	width: 100%; */
+/* 	height: 100%; */
+/* 	opacity: 0.2; */
+/* } */
+#game-header {
+	position: absolute;
+	z-index: 10000;
+	top: 20px;
+	left: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+	#game-header {
+		display: none;
+	}
+}
+
+img[src$=".png"] {
+	image-rendering: -moz-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+/* Scaling, avoid interpolation*/
+/* http://stackoverflow.com/questions/7615009/disable-interpolation-when-scaling-a-canvas*/
+/* http://stackoverflow.com/questions/2670084/canvas-image-smoothing */
+/* http://phoboslab.org/log/2012/09/drawing-pixels-is-hard */
+canvas { /* Older versions of FF*/
+	image-rendering: optimizeSpeed;
+	image-rendering: crisp-edges;
+	/*FF 6.0+*/
+	image-rendering: -moz-crisp-edges;
+	/*Webkit (Safari now, Chrome soon)*/
+	image-rendering: -webkit-optimize-contrast;
+	/*OS X & Windows Opera (12.02+)*/
+	image-rendering: -o-crisp-edges;
+	/*Possible future browsers.*/
+	image-rendering: optimize-contrast;
+	/*IE*/
+	-ms-interpolation-mode: nearest-neighbor;
+	/* Turn off mouse hit detection */
+	pointer-events: none;
+	/* Avoid doing any padding/margin changes on the canvas ! */
+}
+
+#gameContainer {
+	/* 	cursor: none !important; Hide the mouse cursor , ACTUALLY BAD FOR FULLSCREEN OK CLICK */
+	width: 100%;
+	height: 100%;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#game-chain {
+	/* 	border: solid 1px #ff0; */
+	padding: 2px;
+}

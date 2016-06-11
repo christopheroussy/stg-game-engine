@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HTML5 STG-Engine-42</title>
+<meta charset='utf-8'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="author" content="Christophe Roussy">
+<meta name="dcterms.rightsHolder" content="Christophe Roussy">
+<meta name="description" content="HTML5 vertical STG engine.">
+<meta name="keywords"
+	content="STG, shmup, bullet, game, indie, doujin, shooter, vertical, 2d, rng, arcade, scroller">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style"
+	content="black-translucent">
+
+<!-- No search engines for now... -->
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+
+<!-- viewport user-scalable=no forbids pinch-zooming, which conflicts with the game ! -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="icon" type="image/png" href="favicon.png" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div style="display: none;">
+		<h1>HTML5 STG, shmup, engine (pre-alpha)</h1>
+		<p>A classic STG game built using HTML5 with Phaser.io.</p>
+	</div>
+	<div id="game-header">
+		<div>
+			<span>SCORE:</span> <span id="game-score">0</span>
+		</div>
+		<div id="title">Mythical Wings (PRE-ALPHA-v0.3)</div>
+		<div>
+			STILL IN DEVELOPMENT
+			<div></div>
+			DO NOT EXPECT TOO MUCH !
+		</div>
+		<div id="engine">STG-WEB Engine 42</div>
+		<div id="game-chain">PLAYER1 CHAIN</div>
+		<!-- <div id="game-combos">COMBOS</div> -->
+		<div id="game-latest-score"></div>
+		<div id="game-lives"></div>
+		<div id="game-highscore"></div>
+		<div>
+			FPS: <span id="game-fps"></span>
+		</div>
+		<div id="game-paused">-</div>
+		<div>CONTROLS (this is pre-alpha...)</div>
+		<div>ESDF or arrows: move</div>
+		<div>J or X : shoot</div>
+		<div>K or C : switch</div>
+		<div>P : pause</div>
+		<!-- 		<div style="margin-top: 10px;"> -->
+		<!-- Line: <span id="game-current-line"></span> -->
+		<!-- 		</div> -->
+		<div id="game-current-line-debug"></div>
+		<div id="game-gamepad-supported">---</div>
+		<!-- 		<div> -->
+		<!-- 			<a id="reloadLevel" href="#" -->
+		<!-- 				onclick="window.gameInst.state.start('LevelForest'); return false;">Caves</a> -->
+		<!-- 		</div> -->
+		<!-- 		<div> -->
+		<!-- 			<a id="reloadLevel" href="#" -->
+		<!-- 				onclick="window.gameInst.state.start('LevelIslands'); return false;">Floating -->
+		<!-- 				islands</a> -->
+		<!-- 		</div> -->
+		<div style="margin-top: 5px;">
+			<a href="" onclick="window.gameInst.gofull(); return false;">GO
+				FULLSCREEN</a>
+		</div>
+		<div style="margin-top: 5px;">
+			<a href="" onclick="window.gameInst.destroy(); return false;">Clean
+				all (dev only)</a>
+		</div>
+		<div>Links:</div>
+		<ul>
+			<li><a
+				href="http://shmups.system11.org/viewtopic.php?f=9&t=56179"
+				target="_blank">shmups.system11.org (english)</a></li>
+			<li><a href="http://forum.shmup.com/viewtopic.php?f=29&t=20095"
+				target="_blank">forum.shmup.org (french)</a></li>
+			<li><a href="https://www.youtube.com/user/STGWeekly"
+				target="_blank">STG Weekly</a></li>
+			<li><a href="http://www.phaser.io/" target="_blank">Made
+					with Phaser framework</a></li>
+		</ul>
+	</div>
+	<div id="loadingMessage" style="color: #FFF;">LOADING GAME ...
+		PLEASE WAIT</div>
+	<div id="scanlines"></div>
+	<div id="gameContainer" class="noselect">
+		<!-- Canvas will be injected here by Phaser.io -->
+	</div>
+
+	<!-- 	<script src="js/external/powerarray.js"></script> -->
+	<script src="js/custom/normalizer.js"></script>
+
+	<!-- 	<script src="js/external/phaser.min.js"></script> -->
+	<script src="js/old/phaser.min.js"></script>
+
+	<!-- Tools -->
+	<script src="js/custom/finite-state-machine.js"></script>
+	<!-- 	<script src="js/custom/generator.js"></script> -->
+
+	<script src="js/custom/boot.js"></script>
+	<script src="js/custom/preloader.js"></script>
+	<script src="js/custom/main-menu.js"></script>
+	<script src="js/custom/game-core.js"></script>
+	<script src="js/custom/enemy-factory.js"></script>
+	<script src="js/custom/weapon-factory.js"></script>
+	<script src="js/custom/player.js"></script>
+
+	<script src="js/custom/level-loader.js"></script>
+
+	<!-- 	<script src="js/min/level.min.js"></script> -->
+	<script src="js/custom/level.js"></script>
+
+	<script src="js/custom/level-islands.js"></script>
+	<script src="js/custom/level-forest.js"></script>
+	<script src="js/custom/level-space.js"></script>
+
+	<script type="text/javascript">
+    window.onload = function() {
+      "use strict";
+
+      // Create your Phaser game and inject it into the gameContainer div.
+      // We did it in a window.onload event, but you can do it anywhere
+      // (requireJS load, anonymous function, jQuery dom ready, - whatever
+      // floats your boat)
+      stg.setup('gameContainer');
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+-- USER MANUAL --
+
+Troubleshooting:
+----------------
+* For local/offline play in Chrome you need this command:
+google-chrome --allow-file-access-from-files
+
+Firefox
+    Go to about:config
+    Find security.fileuri.strict_origin_policy parameter
+    Set it to false
+
+Using a gamepad or joystick
+---------------------------
+The gamepads work in Chrome 21 or higher
+
+As of Firefox 24, the Gamepad API is available behind a preference. You can enable it by loading about:config and setting the dom.gamepad.enabled preference to true.
+
+The 'dmesg' command (gives you info about the connected devices, for example the device identifier)
+
+sudo xboxdrv --silent --device-by-id 044f:b326 --type xbox360 --trigger-as-zaxis
+
+
+jstest-gtk
+
+You need to press some button before it works. You can test it here:
+http://www.html5rocks.com/en/tutorials/doodles/gamepad/gamepad-tester/tester.html
+
+Technical article:
+http://www.html5rocks.com/en/tutorials/doodles/gamepad/
+
+
+LEVEL EDITOR
+------------
+The first 'p' character found from top to bottom will be used.
+Place 'p' character anywhere you want to start/test, but...
+if you want to test a section make sure you place the 'p' character one screen before the section in order
+to simulate the proper loading of this section, because otherwise the enemy behavior will be different as
+everything gets loaded at once on the start screen.
+Example:
+Instead of these bullets (not synchronized because progressively loaded line by line):
+*
+ *
+  *
+You may get (synchronized because all enemies loaded a once):
+*
+*
+*
+To fix let the player start somewhere before the section you want to test.
+
+
+Do not forget it is text:
+- you can use Insert mode
+- you can also use tools to ascii paint
+- you can copy & paste
+

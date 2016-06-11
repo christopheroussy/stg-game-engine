@@ -1,0 +1,22 @@
+{
+  "name": "Shmup engine",
+  "version": "1.0.0",
+  "developer": {
+    "name": "Mozilla Partner Engineering",
+    "url": "https://github.com/nickdesaulniers/fxos-irc/graphs/contributors"
+  },
+  "description": "An IRC client",
+  "launch_path": "/index.html",
+  "permissions": {
+    "tcp-socket": {
+      "description": "tcp"
+    },
+    "desktop-notification": {
+      "description": "privMSGs and mentions"
+    }
+  },
+  "icons": {
+    "128": "/images/128.png"
+  },
+  "type": "privileged"
+}
