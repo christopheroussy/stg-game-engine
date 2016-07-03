@@ -1,13 +1,9 @@
 *.DS_Store
 .DS_Store
+target
+*~
+*.swp
 gen
 out
 bin
-*.iml
-*.ipr
-*.iws
-target
 tmp
-~apklib*
-gen-external-apklibs
-atlassian-ide-plugin.xml
