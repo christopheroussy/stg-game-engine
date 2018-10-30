@@ -17,7 +17,7 @@ The engine is not fully done, but has a lot of interesting features
 ## Canvas vs WebGL
 
 Uses either canvas or webgl, I recommend canvas for pixel based games.
-Also note that some browsers still have poor webgl support.
+Also note that some browsers still have poor webgl support (edit: well that was true in 2015 ...).
 
 ## Forum discussions
 
