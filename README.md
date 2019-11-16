@@ -32,11 +32,14 @@ Just open the `index.html` in order to run it will usually not be enough due to 
 
 `google-chrome --allow-file-access-from-files`
 
-### Firefox
+### Firefox (recommended)
 
-    Type `about:config` in the browser url bar
-    Find `security.fileuri.strict_origin_policy` parameter
+    1. Type `about:config` in the browser url bar
+    
+    2. Find `security.fileuri.strict_origin_policy` parameter
     Set it to `false`
+    
+    OR `privacy.file_unique_origin`, set it to `false`
 
 ## Using a gamepad or joystick
 
